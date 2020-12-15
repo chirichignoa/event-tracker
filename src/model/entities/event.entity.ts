@@ -4,15 +4,15 @@ import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 export default class EventEntity {
 
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Column({nullable: false, default: ''})
-  name: string;
+  name!: string;
 
   @Column({ nullable: false, default: 0})
-  count: number;
+  count!: number;
 
   @Column('datetime', {name: 'occurrence_time', nullable: false})
-  occurrenceTime: Date;
+  occurrenceTime!: Date;
   
 }
