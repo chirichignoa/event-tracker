@@ -20,8 +20,8 @@ export let countEvent = async (req: Request, res: Response) => {
     const data = await trackEventService.trackEvent(eventName, occurrences);
     res.status(200).json(new HttpResponseDTO(data, null));
   } catch(error){
-      logger.error(`Error caught at tracking event: ${error}`)
-      res.status(500).json(new HttpResponseDTO(null, error));
+    logger.error(`Error caught at tracking event: ${error}`)
+    res.status(500).json(new HttpResponseDTO(null, error));
   }
 }
 
@@ -69,10 +69,7 @@ export let getHistogram = async (req: Request, res: Response) => {
   const date: string = req.params.date;
   try {
     const image = await histogramService.getHistogram(eventName, date);
-    // res.status(200).json(new HttpResponseDTO(data, null));
-
-    res.type("image/png")
-    res.send(image) 
+    res.type("image/png").status(200).send(image) 
   } catch(error){
       logger.error(`Error caught at tracking event: ${error}`)
       res.status(500).json(new HttpResponseDTO(null, error));

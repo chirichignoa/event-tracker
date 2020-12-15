@@ -4,7 +4,7 @@ import { eventRouter } from '../route/eventRoute';
 import { expressLogger, logger } from '../util/logger';
 
 
-export class Server {
+export default class Server {
 
   app: express.Application;
   port: number;

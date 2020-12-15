@@ -17,7 +17,7 @@ export const trackEvent = async (eventName: string, occurrences: number) => {
     if(event) {
       event.count += occurrences;
     } else {
-      event = eventMapper.mapToEntity(new Event(eventName, occurrences ));
+      event = eventMapper.mapToEntity(new Event(eventName, occurrences));
     }
 
     logger.info(`Event about to save: ${JSON.stringify(event)}`)

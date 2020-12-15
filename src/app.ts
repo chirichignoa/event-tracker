@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import {logger } from './util/logger';
-import { Server } from "./server/server";
+import Server from "./server/server";
 
 const httpPort = 3000;
 

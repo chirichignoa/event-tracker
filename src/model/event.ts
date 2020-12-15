@@ -16,8 +16,4 @@ export default class Event {
   increaseCount(occurrences?: number) {
     this.count += occurrences || 1;
   }
-
-  registerLastOccurrence() {
-    this.occurrenceTime = new Date();
-  }
 }
