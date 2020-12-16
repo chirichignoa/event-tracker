@@ -1,6 +1,8 @@
-import {Connection, ConnectionOptions, createConnection} from "typeorm";
-import { logger } from '../util/logger';
 import dotenv from 'dotenv';
+import { logger } from '../util/logger';
+import EventEntity from "../model/entities/event.entity";
+import {Connection, ConnectionOptions, createConnection} from "typeorm";
+
 dotenv.config();
 
 let connection: Connection;
@@ -15,7 +17,7 @@ const dbConfig: ConnectionOptions = {
   "synchronize": true,
   "logging": false,
   "entities": [
-     "src/model/entities/**/*.ts"
+    EventEntity
   ],
   "insecureAuth": true
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'test/**/*.ts' --exit",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev": "tsc && ts-node-dev --respawn --transpile-only src/app.ts",
     "start": "tsc && node ./dist/src/app.js"
   },
   "author": "",
