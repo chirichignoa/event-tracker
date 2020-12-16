@@ -7,7 +7,7 @@
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'test/**/*.ts' --exit",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "prod": "tsc && node ./dist/app.js"
+    "start": "tsc && node ./dist/src/app.js"
   },
   "author": "",
   "license": "ISC",
