@@ -22,8 +22,6 @@ const dbConfig: ConnectionOptions = {
   "insecureAuth": true
 }
 
-console.log(dbConfig);
-
 export async function connect() {
   logger.info('Trying to connect to database');
   connection = await createConnection(dbConfig); 
