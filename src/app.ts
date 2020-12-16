@@ -2,9 +2,9 @@ import "reflect-metadata";
 import {logger } from './util/logger';
 import Server from "./server/server";
 
-const httpPort = 3000;
+const httpPort: number = Number(process.env.PORT) || 3000;
 
-const httpServer = new Server();
+const httpServer = new Server(httpPort);
 httpServer.initServer()
 .then(() => {
   logger.info(`Server succesfully initialized`);
